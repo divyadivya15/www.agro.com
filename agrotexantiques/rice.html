@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<title>AGRO TEX ANTIQUES</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    
+
+<!-- Top Bar -->
+<div class="top-bar">
+<div class="container d-flex justify-content-between">
+<div>📞 +91 98765 43210</div>
+<div>✉ info@agrotexantiques.com</div>
+</div>
+</div>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img src="../agrotexantiques/assets/img/logo.png" class="logo-img">
+<span class="logo-text">AGRO TEX ANTIQUES</span>
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">Company Profile</a></li>
+<li class="nav-item"><a class="nav-link" href="exports.html">Rice Export</a></li>
+<li class="nav-item dropdown">
+
+  <a class="nav-link dropdown-toggle" href="#" id="productsDropdown">
+    Products
+  </a>
+
+  <ul class="dropdown-menu mega-menu">
+
+    <li><a class="dropdown-item" href="products/rice.html">Rice</a></li>
+    <li><a class="dropdown-item" href="#">Indian Pulses</a></li>
+    <li><a class="dropdown-item" href="#">Whole & Ground Spices</a></li>
+
+  </ul>
+
+</li>
+
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+
+<!-- Banner -->
+<div class="banner">
+  <img src="assets/img/banner.png" alt="Banner Image" class="banner-img">
+</div>
+
+<section class="hero-about">
+
+<div class="container">
+<div class="row align-items-center">
+
+<!-- LEFT CONTENT -->
+<div class="col-lg-6 col-md-12 mb-4">
+    
+<h2 class="hero-title">AGRO TEX ANTIQUES</h2>
+
+<h5 class="hero-sub">Premium Indian Rice Exporters & Food Suppliers</h5>
+
+<p class="hero-desc">
+Agro Tex Antiques is a trusted exporter of high-quality Indian food products including rice, spices, edible oils, and traditional food items. We deliver authentic taste and premium quality across global markets.
+</p>
+
+<!-- HIDDEN CONTENT -->
+<div class="more-content" id="moreContent">
+
+<p class="hero-desc">
+We specialize in exporting varieties like Ponni Rice, Basmati Rice, and traditional South Indian rice. Our product range also includes pulses, spice powders, jaggery, snacks, and frozen foods.
+</p>
+
+<p class="hero-desc">
+As a leading Indian rice exporter, we focus on hygiene, packaging standards, and timely delivery. Our mission is to provide healthy, natural, and high-quality food products worldwide.
+</p>
+
+</div>
+
+<!-- BUTTON -->
+<button class="hero-btn" onclick="toggleContent()" id="viewBtn">
+View More
+</button>
+
+</div>
+
+<!-- RIGHT IMAGE -->
+<div class="col-lg-6 col-md-12 text-center">
+
+<div class="circle-image">
+<img src="assets/img/banner.png" alt="Indian Rice Exporter">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ===== BODY CONTENT START ===== -->
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== SECTION ===== */
+.product-section{
+  width:90%;
+  margin:40px auto;
+}
+
+/* ===== GRID ===== */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+}
+
+/* ===== CARD ===== */
+.product-card{
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.product-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+  transition:0.4s;
+}
+
+/* DARK OVERLAY */
+.product-card::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.4);
+}
+
+/* CENTER TEXT */
+.product-card h2{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:#ffcc00;
+  font-family:'Playfair Display', serif;
+  font-weight:bold;
+  font-size:22px;
+  text-align:center;
+  z-index:1;
+}
+
+/* HOVER EFFECT */
+.product-card:hover img{
+  transform:scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<div class="product-section">
+
+  <div class="product-grid">
+
+    <div class="product-card" onclick="openPage('basmati.html')">
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+      <h2>Basmati Rice</h2>
+    </div>
+
+    <div class="product-card" onclick="openPage('white.html')">
+      <img src="https://images.unsplash.com/photo-1627483298606-cf77c8d04c73">
+      <h2>White Rice</h2>
+    </div>
+
+    <div class="product-card" onclick="openPage('brown.html')">
+      <img src="https://images.unsplash.com/photo-1604909053197-93c3f9c1e3c5">
+      <h2>Brown Rice</h2>
+    </div>
+
+    <div class="product-card" onclick="openPage('ponni.html')">
+      <img src="https://images.unsplash.com/photo-1615485291234-1f3cbb6cbb2c">
+      <h2>Ponni Rice</h2>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer-section">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-4 col-md-6 mb-4">
+<h4 class="footer-title">AGRO TEX ANTIQUES</h4>
+<p>
+We are leading exporters of rice, spices and Indian food products
+with best quality and global delivery.
+</p>
+</div>
+
+
+<div class="col-lg-2 col-md-6 mb-4">
+<h5 class="footer-title">Quick Links</h5>
+
+<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">Company Profile</a></li>
+<li><a href="exports.html">Rice Export</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5 class="footer-title">Products</h5>
+
+<ul class="footer-links">
+<li>Rice</li>
+<li>Spices</li>
+<li>Snacks</li>
+<li>Sesame Oil</li>
+</ul>
+
+</div>
+
+
+<div class="col-lg-3 col-md-6 mb-4">
+<h5 class="footer-title">Contact</h5>
+
+<p>📞 +91 98765 43210</p>
+<p>✉ info@agrotex.com</p>
+<p>📍 Chennai, India</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Agro Tex Antiques. All Rights Reserved.
+</div>
+
+</footer>
+
+
+<!-- JS -->
+<script src="assets/js/script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
